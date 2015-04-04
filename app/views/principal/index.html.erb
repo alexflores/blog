@@ -1,2 +1,10 @@
 <h1>BLOG TALLER DE PROGRAMACION</h1>
 
+<ul>
+	<% @posts.each do |post| %>
+      <li>
+      	<h3><%= post.title %></h3>
+      	<p><%= post.content %></p>
+      </li>
+	<% end %>
+</ul>
