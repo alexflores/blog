@@ -2,6 +2,12 @@ Blog::Application.routes.draw do
   get "principal/index"
   resources :posts
   post '/comments' => 'comments#create'
+  resources :posts do
+     member do
+      get:like
+      put:update_status
+      end
+  end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

@@ -6,6 +6,7 @@
       	<h3><%= link_to post.title, post %></h3>
       	<p><%= post.content %></p>
       	<p><%= post.created_at %></p>
+      	<p><%= post.like %><%= link_to ' like', like_post_path(post) %></p>
       </li>
 	<% end %>
 </ul>

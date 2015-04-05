@@ -61,6 +61,17 @@ class PostsController < ApplicationController
     end
   end
 
+  def like
+     @post = Post.find(params[:id])
+     if@post.like==nil
+       @post.like=1
+     else
+       @post.like+=1
+     end 
+     @post.save
+     redirect_to '/'
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_post
