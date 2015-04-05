@@ -3,7 +3,7 @@ class CommentsController < ApplicationController
 	def create
       @comment = Comment.new(comment_params)
       if @comment.save
-        redirect_to "/posts/"+@comment.post.id.to_s, notice: "Comentario creada exitosamente"
+        redirect_to "/posts/"+@comment.post.id.to_s, notice: "Comentario creado exitosamente"
       else
         redirect_to "/posts/"+@comment.post.id.to_s, notice: "Error al crear Comentario"
       end
