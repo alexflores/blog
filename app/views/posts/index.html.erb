@@ -1,5 +1,13 @@
 <h1>Listing posts</h1>
 
+<h2>Search posts</h2>
+<%= form_tag({:controller => 'posts', :action => 'index'}, :method => 'get') do %>
+  <%= label_tag 'Content' %>
+  <%= text_field_tag 'search', params[:search]  %>
+  <br />
+  <%= submit_tag 'Send' %>
+<% end %>
+
 <table>
   <thead>
     <tr>
