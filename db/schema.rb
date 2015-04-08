@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150408172854) do
+ActiveRecord::Schema.define(version: 20150408180859) do
 
   create_table "comments", force: true do |t|
     t.text     "description"
@@ -30,5 +30,14 @@ ActiveRecord::Schema.define(version: 20150408172854) do
     t.integer  "like"
     t.string   "category"
   end
+
+  create_table "users", force: true do |t|
+    t.string   "name"
+    t.integer  "post_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "users", ["post_id"], name: "index_users_on_post_id"
 
 end
