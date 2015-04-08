@@ -7,11 +7,12 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<nav>
-	<div>
-		<ul>
+
+<nav class="navbar navbar-inverse" role="navigation">
+	<div class='collapse navbar-collapse navbar-ex1-collapse'>
+		<ul class='nav navbar-nav'>
 			<li><%= link_to 'Home', root_path %></li>
-			<li><%= link_to 'Admin', posts_path %></li>
+			<li><%= link_to 'Administrador', posts_path %></li>
 		</ul>
 	</div>
 </nav>

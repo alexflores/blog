@@ -6,7 +6,7 @@ class Post < ActiveRecord::Base
         search_condition = "%" + search + "%"
         find(:all, :conditions => ['content LIKE ? ', search_condition])
       else
-        find(:all)
+        find(:all, :order => 'created_at DESC')
       end
     end
 end
