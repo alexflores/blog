@@ -72,6 +72,11 @@ class PostsController < ApplicationController
      redirect_to '/'
   end
 
+  def report
+    @posts = Post.all
+    @posts.sort_by!{|obj| obj[@order]}
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_post

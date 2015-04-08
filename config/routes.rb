@@ -1,7 +1,10 @@
 Blog::Application.routes.draw do
   get "principal/index"
+
+  get '/posts/report/' => 'posts#report', to: 'posts#report'
   resources :posts
   post '/comments' => 'comments#create'
+  
   resources :posts do
      member do
       get:like
